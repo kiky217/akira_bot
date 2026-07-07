@@ -14,7 +14,7 @@ Fokus utama:
 
 ## 1. Struktur Folder
 
-Direkomendasikan menggunakan path:
+Direkomendasikan menggunakan path: /opt/akira_bot
 
 ```bash
 /opt/akira_bot
@@ -26,10 +26,15 @@ Direkomendasikan menggunakan path:
 │   └── requirements.txt
 └── logs
 
+---
+
 ### 2. Masuk ke Folder Project
 sudo mkdir -p /opt/akira_bot/app
 sudo mkdir -p /opt/akira_bot/logs
 cd /opt/akira_bot
+
+---
+
 #### 3. Buat File Konfigurasi
 cp .env.example .env
 nano .env
@@ -49,6 +54,8 @@ DRY_RUN=true
 
 Jangan langsung live trading sebelum bot diuji.
 
+---
+
 ##### 4. Jalankan Bot
 docker compose up -d
 
@@ -63,12 +70,18 @@ docker compose logs -f akira_bot
 Atau:
 
 tail -f logs/trading.log
+
+---
+
 ###### 5. Matikan Bot
 docker compose down
 
 Atau stop saja:
 
 docker compose stop akira_bot
+
+---
+
 ####### 6. Mode Aman
 
 Mode aman untuk testing:
@@ -82,6 +95,8 @@ ENABLE_LIVE_TRADING=true
 DRY_RUN=false
 
 Gunakan mode live hanya setelah strategi diuji.
+
+---
 
 ######## 7. Telegram
 
@@ -97,18 +112,27 @@ Notifikasi sinyal
 Notifikasi order
 Error penting
 Status bot
+
+---
+
 ######### 8. Catatan Keamanan
 Jangan upload file .env ke GitHub
 Jangan bagikan API secret
 Gunakan API key Indodax dengan izin seperlunya
 Mulai dari nominal kecil
 Aktifkan live trading hanya jika sudah paham risikonya
+
+---
+
 ########## 9. Perintah Update
 
 Jika ada perubahan kode:
 
 docker compose down
 docker compose up -d --build
+
+---
+
 ########### 10. Catatan Risiko
 
 Trading crypto memiliki risiko tinggi.

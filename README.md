@@ -28,7 +28,7 @@ Direkomendasikan menggunakan path: /opt/akira_bot
 
 ---
 
-### 2. Masuk ke Folder Project
+**### 2. Masuk ke Folder Project**
 sudo mkdir -p /opt/akira_bot/app
 sudo mkdir -p /opt/akira_bot/logs
 cd /opt/akira_bot

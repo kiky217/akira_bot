@@ -12,7 +12,7 @@ Fokus utama:
 # 1. Struktur Folder
 Direkomendasikan menggunakan path: /opt/akira_bot
 
-bash
+'''bash
 /opt/akira_bot
 ├── docker-compose.yml
 ├── .env

@@ -1,15 +1,4 @@
 # akira_bot_trading
-# 1
-# 2
-# 3
-# 4
-# 5
-# 6
-# 7
-# 8
-# 9
-# 10
-
 akira_bot_trading adalah bot trading Indodax berbasis Docker untuk gaya scalping fleksibel.
 
 Fokus utama:
@@ -20,13 +9,10 @@ Fokus utama:
 - Bisa eksekusi order jika live trading diaktifkan
 - Notifikasi menggunakan Telegram
 
----
-
-## 1. Struktur Folder
-
+# 1. Struktur Folder
 Direkomendasikan menggunakan path: /opt/akira_bot
 
-```bash
+bash
 /opt/akira_bot
 ├── docker-compose.yml
 ├── .env
@@ -36,16 +22,13 @@ Direkomendasikan menggunakan path: /opt/akira_bot
 │   └── requirements.txt
 └── logs
 
----
+# 2. Masuk ke Folder Project
 
-### 2. Masuk ke Folder Project
 sudo mkdir -p /opt/akira_bot/app
 sudo mkdir -p /opt/akira_bot/logs
 cd /opt/akira_bot
 
----
-
-#### 3. Buat File Konfigurasi
+# 3. Buat File Konfigurasi
 cp .env.example .env
 nano .env
 
@@ -64,9 +47,7 @@ DRY_RUN=true
 
 Jangan langsung live trading sebelum bot diuji.
 
----
-
-##### 4. Jalankan Bot
+# 4. Jalankan Bot
 docker compose up -d
 
 Cek status:
@@ -81,18 +62,14 @@ Atau:
 
 tail -f logs/trading.log
 
----
-
-###### 5. Matikan Bot
+# 5. Matikan Bot
 docker compose down
 
 Atau stop saja:
 
 docker compose stop akira_bot
 
----
-
-####### 6. Mode Aman
+# 6. Mode Aman
 
 Mode aman untuk testing:
 
@@ -106,9 +83,7 @@ DRY_RUN=false
 
 Gunakan mode live hanya setelah strategi diuji.
 
----
-
-######## 7. Telegram
+# 7. Telegram
 
 Tambahkan token bot Telegram:
 
@@ -123,27 +98,21 @@ Notifikasi order
 Error penting
 Status bot
 
----
-
-######### 8. Catatan Keamanan
+# 8. Catatan Keamanan
 Jangan upload file .env ke GitHub
 Jangan bagikan API secret
 Gunakan API key Indodax dengan izin seperlunya
 Mulai dari nominal kecil
 Aktifkan live trading hanya jika sudah paham risikonya
 
----
-
-########## 9. Perintah Update
+# 9. Perintah Update
 
 Jika ada perubahan kode:
 
 docker compose down
 docker compose up -d --build
 
----
-
-########### 10. Catatan Risiko
+# 10. Catatan Risiko
 
 Trading crypto memiliki risiko tinggi.
 Bot ini adalah alat bantu otomasi, bukan jaminan profit.

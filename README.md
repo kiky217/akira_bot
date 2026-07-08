@@ -77,7 +77,7 @@ Konfigurasi lewat file `.env` yang sederhana. Tidak ada kode yang perlu ditulis.
 ```
 git clone https://github.com/kiky217/akira_bot.git
 mkdir /opt/akira_bot
-cd akira_bot
+cd /opt/akira_bot
 cp -r akira_bot/ akira_bot_trading
 ```
 # 1. Struktur Folder

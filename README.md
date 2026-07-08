@@ -72,7 +72,14 @@ Konfigurasi lewat file `.env` yang sederhana. Tidak ada kode yang perlu ditulis.
 | **Indodax API v2** | Integrasi langsung ke endpoint resmi Indodax |
 
 ----------------------------------------------------
+# 1. Instalation
 
+```
+git clone https://github.com/kiky217/akira_bot.git
+mkdir /opt/akira_bot
+cd akira_bot
+cp -r akira_bot/ akira_bot_trading
+```
 # 1. Struktur Folder
 Direkomendasikan menggunakan path: ```/opt/akira_bot```
 
